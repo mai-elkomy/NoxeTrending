@@ -1,0 +1,13 @@
+{
+  "routes": [
+    "/about",
+    "/cart",
+    "/home",
+    "/login",
+    "/movies",
+    "/people",
+    "/products",
+    "/register",
+    "/tv"
+  ]
+}
