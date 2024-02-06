@@ -1,0 +1,69 @@
+<div class="row mt-4">
+    <div class="col-md-3">
+        <img *ngIf="itemdetails.poster_path" class="w-100"
+            [src]="'https://image.tmdb.org/t/p/w500'+itemdetails.poster_path" alt="">
+        <img *ngIf="itemdetails.profile_path" class="w-100"
+            [src]="'https://image.tmdb.org/t/p/w500'+itemdetails.profile_path" alt="">
+
+    </div>
+    <div class="d-flex align-items-center col-md-9 ">
+        <div class="">
+
+            <h3 class="h2" style="font-weight: bolder; "> {{itemdetails.title}}
+                {{itemdetails.name}} </h3>
+            <p class="py-2 text-muted">{{itemdetails.overview}}</p>
+            <p *ngIf="itemdetails.biography" class="text-muted">{{itemdetails.biography.split(" ").slice(0,50).join("
+                ")}}</p>
+            <p *ngIf="itemdetails.vote_count"> vote count : {{itemdetails.vote_count}}</p>
+            <p *ngIf="itemdetails.release_date"> Release date : {{itemdetails.release_date}}</p>
+            <p *ngIf=" itemdetails.birthday"> Birthday : {{itemdetails.birthday}}</p>
+            <p *ngIf="itemdetails.place_of_birth"> place of birth : {{itemdetails.place_of_birth}}</p>
+            <div *ngIf="itemdetails.spoken_languages">
+                <ul class="d-flex spoken">
+                    <li>spoken Language : </li>
+                    <li *ngFor="let item of itemdetails.spoken_languages" style="  text-decoration: underline;"
+                        class="ms-2">{{item.english_name}}</li>
+                </ul>
+            </div>
+
+            <div *ngIf="itemdetails. also_known_as">
+                <ul class="d-flex spoken">
+                    <li>Also Known as : </li>
+                    <li *ngFor="let item of itemdetails.also_known_as.slice(0,5)" class="ms-2"
+                        style="  text-decoration: underline;">
+                        {{item}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="w-100 text-center d-flex justify-content-center align-items-center flex-column mt-4 py-3 "
+    style="font-weight: bolder;">
+    <h2 class="h1">
+        Similar
+    </h2>
+    <div class="w-25 brdr"></div>
+
+</div>
+<div class="row mt-4">
+
+    <div class="col-md-2 py-2 mt-2" *ngFor="let simi of similar">
+
+        <div class="position-relative" (click)="getSimilar(simi.id,mediaType)">
+
+            <img *ngIf="simi.poster_path" class="w-100" [src]="'https://image.tmdb.org/t/p/w500/'+simi.poster_path"
+                alt="">
+            <img *ngIf="simi.profile_path" class="w-100" [src]="'https://image.tmdb.org/t/p/w500/'+simi.profile_path"
+                alt="">
+            <img *ngIf="simi.profile_path && simi.poster_path" class="w-100"
+                src="../../assets/unknown-person-icon-Image-from.png" alt="">
+            <h3 class="h6 my-2">
+                {{simi.title}} {{simi.name}}
+            </h3>
+            <div *ngIf="simi.vote_average" class="position-absolute vote top-0 end-0">
+                {{simi.vote_average.toFixed(1)}}
+            </div>
+
+        </div>
+    </div>
+</div>

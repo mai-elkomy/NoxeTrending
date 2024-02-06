@@ -1,0 +1,63 @@
+<div class="w-50 mx-auto p-3">
+    <input type="search" name="" id="" class="form-control search" placeholder="Search by title" [(ngModel)]="title">
+</div>
+<div class="row mt-3">
+    <div class="col-md-4 d-flex align-items-center  ">
+        <div>
+            <div class="w-25 brdr mb-3">
+
+            </div>
+            <h2 class="h5">
+                Trending <br> Movies <br> To watch right Now
+            </h2>
+            <p class="text-muted py-2">Most watchet movies by the day</p>
+            <div class="w-100 brdr mb-3">
+
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-2" *ngFor="let Movie of MovieTrending | search:title">
+        <app-mediaitem [item]="Movie"></app-mediaitem>
+    </div>
+</div>
+<div class="row mt-3 py-5">
+    <div class="col-md-4 d-flex align-items-center  ">
+        <div>
+            <div class="w-25 brdr mb-3">
+
+            </div>
+            <h2 class="h5">
+                Trending <br> Tv <br> To watch right Now
+            </h2>
+            <p class="text-muted py-2">Most watched Tvs by the day</p>
+            <div class="w-100 brdr mb-3">
+
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-2" *ngFor="let tv of tvTrending">
+        <app-mediaitem [item]="tv"></app-mediaitem>
+    </div>
+</div>
+<div class="row mt-3 py-5">
+    <div class="col-md-4 d-flex align-items-center  ">
+        <div>
+            <div class="w-25 brdr mb-3">
+
+            </div>
+            <h2 class="h5">
+                Trending <br> People <br> To watch right Now
+            </h2>
+            <p class="text-muted py-2">Most watched People by the day</p>
+            <div class="w-100 brdr mb-3">
+
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-2" *ngFor="let People of PeopleTrending">
+        <app-mediaitem [item]="People"></app-mediaitem>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+.registered {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    font-size: 12px;
+}
+
+
+.btn-col {
+    background-color: #e5dccb;
+}
+
+:placeholder-shown {
+    font-size: 12px;
+}
+
+img {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.alert {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* div {
+    margin-left: 0px;
+    padding-left: 0px;
+} */
+
+/* .parent {
+    margin-top: 0px;
+    height: 100vh;
+    background-image: url(../../assets/3d-rendering.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+} */

@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Montserrat+Alternates&family=Protest+Guerrilla&display=swap');
+
+:root {
+    --bg-main: #131722;
+    --light-bg: #24baef;
+    --main-font: 'Montserrat Alternates', sans-serif;
+    --text-color: black;
+    --border-color: #a8a8a83d;
+}
+
+.bg-min-light {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+body {
+    /* background-color: var(--bg-main); */
+    font-family: var(--main-font);
+
+}
+
+a,
+a:hover {
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.input-mine {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.back {
+    background-color: #e5dccb;
+}
+
+.brdr {
+    height: 1px;
+    background-color: #b9ae9b;
+}
+
+.vote {
+    background-color: #e8d9bb;
+    padding: 2px;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    flex-wrap: wrap;
+}
+
+ul li {
+    list-style-type: none;
+
+    margin: 0px;
+    padding: 0px;
+
+}
+
+img {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.h1 {
+    font-family: 'Honk', system-ui;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 55px;
+}
+
+.search {
+    -webkit-box-shadow: 0px 3px 16px 3px rgba(143, 120, 96, 1);
+    -moz-box-shadow: 0px 3px 16px 3px rgba(143, 120, 96, 1);
+    box-shadow: 0px 3px 16px 3px rgba(143, 120, 96, 1);
+}
